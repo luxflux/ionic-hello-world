@@ -30,6 +30,17 @@ angular.module('todo', ['ionic'])
 
 .controller('TodoCtrl', function($scope, $timeout, $ionicModal, Projects) {
 
+  ionic.Platform.ready(function(){
+    console.log("Cordova is ready, let's do this!");
+    console.log(navigator);
+    navigator.notification.alert(
+      'You are the winner!',  // message
+      function() {},         // callback
+      'Game Over',            // title
+      'Done'                  // buttonName
+    );
+  });
+
   // A utility function for creating a new project
   // with the given projectTitle
   var createProject = function(projectTitle) {
