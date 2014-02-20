@@ -27,6 +27,13 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/de.appplant.cordova.plugin.local-notification/www/local-notification.js",
+        "id": "de.appplant.cordova.plugin.local-notification.LocalNotification",
+        "clobbers": [
+            "plugin.notification.local"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -34,7 +41,8 @@ module.exports.metadata =
 {
     "org.apache.cordova.device": "0.2.8",
     "org.apache.cordova.console": "0.2.7",
-    "org.apache.cordova.dialogs": "0.2.6"
+    "org.apache.cordova.dialogs": "0.2.6",
+    "de.appplant.cordova.plugin.local-notification": "0.7.2"
 }
 // BOTTOM OF METADATA
 });
