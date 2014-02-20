@@ -32,13 +32,13 @@ angular.module('todo', ['ionic'])
 
   ionic.Platform.ready(function(){
     console.log("Cordova is ready, let's do this!");
-    console.log(navigator);
-    navigator.notification.alert(
-      'You are the winner!',  // message
-      function() {},         // callback
-      'Game Over',            // title
-      'Done'                  // buttonName
-    );
+    window.plugin.notification.local.add({
+      id: 1,
+      title: 'Reminder',
+      message: 'Dont forget to buy some flowers.',
+      date: new Date(new Date().getTime() + 60*1000)
+    });
+    console.log('scheduled');
   });
 
   // A utility function for creating a new project
